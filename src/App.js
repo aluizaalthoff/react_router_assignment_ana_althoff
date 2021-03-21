@@ -1,10 +1,12 @@
-import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
+
+import logo from './logo.svg';
+import './App.css';
 
 export default function App() {
   return (
@@ -28,13 +30,34 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
-            <About />
+            {/* <About /> */}
+            <div className="App">
+              <header className="App-header">
+                <img src={logo} classname="App-logo" alt="logo" />
+                <p>*** ABOUT *** Edit <code>src/App.js</code> and save o reload.</p>
+                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
+              </header>
+            </div>
           </Route>
           <Route path="/users">
-            <Users />
+             {/* <Users /> */}
+             <div className="App">
+              <header className="App-header">
+                <img src={logo} classname="App-logo" alt="logo" />
+                <p>*** USERS *** Edit <code>src/App.js</code> and save o reload.</p>
+                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
+              </header>
+            </div>
           </Route>
           <Route path="/">
-            <Home />
+             {/* <Home /> */}
+             <div className="App">
+              <header className="App-header">
+                <img src={logo} classname="App-logo" alt="logo" />
+                <p>*** HOME *** Edit <code>src/App.js</code> and save o reload.</p>
+                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
+              </header>
+            </div>
           </Route>
         </Switch>
       </div>
@@ -42,14 +65,7 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function About() {
-  return <h2>About</h2>;
-}
 
-function Users() {
-  return <h2>Users</h2>;
-}
+
+
