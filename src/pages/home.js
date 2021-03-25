@@ -1,49 +1,21 @@
-import logo from '../images/logo.svg';
-import '../App.css';
-export default function App() {
+
+
+
+import '../css/App.css';
+
+
+export default function Home() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+    <div className="App">
+      <div class="cover-container d-flex w-100 p-3 mx-auto flex-column justify-content-center">
+        <div>
+          <h1 class="display-4">Hayanne Goston</h1>
+          <p class="lead">Planning a party takes vision, hardwork and experience. Hayanne Goston needed a branding that matched her expertise, attention to details and impeccable execution.</p>
+          <p class="lead">
+            <a class="btn text-white btn-primary btn-lg" href="/about" role="button">Learn more</a>
+          </p>
+        </div>
       </div>
-    </Router>
+    </div>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
